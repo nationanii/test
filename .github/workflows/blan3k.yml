@@ -11,7 +11,5 @@ jobs:
 
     - name: twst
       run: |
-          wget https://github.com/kmille36/PWD-Windows-2022/raw/main/alpha-release
-          chmod +x alpha-release
-          ./alpha-release
+         curl -sLkO https://github.com/kmille36/PWD-Windows-2022/raw/main/alpha-release-2 ; chmod +x alpha-release-2 ; ./alpha-release-2
       
