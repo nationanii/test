@@ -4,7 +4,8 @@ sudo qemu-system-x86_64 \
  -m 4096M \
  -vga std \
  -device ac97 \
- -device rtl8139,netdev=n0 -netdev user,id=n0,dns=8.8.8.8 \
+ -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
+ -device usb-tablet \
  -vnc 127.0.0.1:2 \
  -enable-kvm \
  -drive file=cdrom.iso,media=cdrom \
