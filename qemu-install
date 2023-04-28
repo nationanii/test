@@ -3,8 +3,8 @@ sudo qemu-system-x86_64 \
 -cpu host \
 -enable-kvm \
 -boot order=d \
--drive file=windows.iso,media=cdrom \
--drive file=windows.img,format=raw,if=virtio \
+-drive file=cdrom.iso,media=cdrom \
+-drive file=disk.img,format=raw,if=virtio \
 -drive file=virtio-win.iso,media=cdrom \
 -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
 -device usb-tablet \
