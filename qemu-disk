@@ -1,0 +1,1 @@
+qemu-img create -f raw disk.img 23G
