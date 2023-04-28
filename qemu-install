@@ -2,7 +2,6 @@ sudo qemu-system-x86_64 \
  -cpu host \
  -smp sockets=4,cores=4,threads=4 \
  -m 4096M \
- -vga std \
  -device ac97 \
  -device rtl8139,netdev=n0 -netdev user,id=n0 \
  -vnc 127.0.0.1:2 \
