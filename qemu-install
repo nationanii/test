@@ -1,0 +1,12 @@
+sudo qemu-system-x86_64 \
+ -cpu Cascadelake-Server-noTSX \
+ -smp sockets=4,cores=4,threads=4 \
+ -m 4096M \
+ -vga std \
+ -device ac97 \
+ -device rtl8139,netdev=n0 -netdev user,id=n0,dns=8.8.8.8 \
+ -vnc 127.0.0.1:2 \
+ -enable-kvm \
+ -drive file=cdrom.iso,media=cdrom \
+ -drive file=disk.img,format=raw,if=virtio \
+ -drive file=virtio-win.iso,media=cdrom 
