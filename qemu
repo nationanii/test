@@ -8,5 +8,4 @@ sudo qemu-system-x86_64 \
  -device usb-tablet \
  -vnc 127.0.0.1:2 \
  -enable-kvm \
- -drive file=cdrom.iso,media=cdrom \
  -drive file=disk.img,format=raw,if=virtio \
