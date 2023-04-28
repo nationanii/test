@@ -1,6 +1,6 @@
 sudo qemu-system-x86_64 \
 -m 4G \
--cpu host \
+-cpu Cascadelake-Server-noTSX \
 -enable-kvm \
 -boot order=d \
 -drive file=cdrom.iso,media=cdrom \
