@@ -1,6 +1,6 @@
 sudo qemu-system-x86_64 \
 -m 4G \
--cpu Cascadelake-Server-noTSX \
+-cpu host \
 -enable-kvm \
 -boot order=d \
 -drive file=disk.img,format=raw,if=virtio \
