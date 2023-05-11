@@ -1,14 +1,16 @@
 sudo qemu-system-x86_64 \
 -m 4G \
--cpu host \
+-cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx,vmx=on \
 -enable-kvm \
--boot order=d \
 -drive file=cdrom.iso,media=cdrom \
 -drive file=disk.img,format=raw,if=virtio \
 -drive file=virtio-win.iso,media=cdrom \
--device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
+-device usb-ehci,id=usb \
 -device usb-tablet \
 -vnc 127.0.0.1:2 \
 -device ac97 \
 -smp sockets=1,cores=4,threads=4  \
--vga std
+-vga std \
+-machine type=pc,accel=kvm \
+-device virtio-net-pci,netdev=net0 \
+-netdev user,id=net0,hostfwd=tcp::3389-:3389 \
