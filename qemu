@@ -9,7 +9,7 @@ sudo qemu-system-x86_64 \
 -vnc 127.0.0.1:2 \
 -device ac97 \
 -vga std \
--smp sockets=1,cores=4,threads=4 \
+-smp 4 \
 -machine type=pc,accel=kvm \
 -device virtio-net-pci,netdev=net0 \
 -netdev user,id=net0,hostfwd=tcp::3389-:3389 \
