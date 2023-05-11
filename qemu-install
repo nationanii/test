@@ -9,7 +9,8 @@ sudo qemu-system-x86_64 \
 -device usb-tablet \
 -vnc 127.0.0.1:2 \
 -device ac97 \
--smp 4  \
+-smp 4qemu
+  \
 -vga std \
 -machine type=pc,accel=kvm \
 -device virtio-net-pci,netdev=net0 \
