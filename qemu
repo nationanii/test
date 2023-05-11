@@ -1,5 +1,5 @@
 sudo qemu-system-x86_64 \
--m 2G \
+-m 4G \
 -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx,vmx=on \
 -enable-kvm \
 -boot order=d \
@@ -9,7 +9,7 @@ sudo qemu-system-x86_64 \
 -vnc 127.0.0.1:2 \
 -device ac97 \
 -vga std \
--smp sockets=1,cores=2,threads=2 \
+-smp sockets=1,cores=4,threads=4 \
 -machine type=pc,accel=kvm \
 -device virtio-net-pci,netdev=net0 \
 -netdev user,id=net0,hostfwd=tcp::3389-:3389 \
