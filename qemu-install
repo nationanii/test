@@ -9,7 +9,8 @@ sudo qemu-system-x86_64 \
 -device usb-tablet \
 -vnc 127.0.0.1:2 \
 -smp 4 \
--vga std \
+-audio pa,model=ac97 \
+-vga vitrio \
 -machine type=pc,accel=kvm:tcg \
 -device virtio-net-pci,netdev=net0 \
 -netdev user,id=net0,hostfwd=tcp::3389-:3389 \
