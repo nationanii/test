@@ -8,7 +8,7 @@ sudo qemu-system-x86_64 \
 -device usb-ehci,id=usb \
 -device usb-tablet \
 -vnc 127.0.0.1:2 \
--device intel-hda \
+-device sb16 \
 -smp 4 \
 -vga std \
 -machine type=pc,accel=kvm \

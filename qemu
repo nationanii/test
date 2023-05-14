@@ -7,9 +7,10 @@ sudo qemu-system-x86_64 \
 -device usb-ehci,id=usb \
 -device usb-tablet \
 -vnc 127.0.0.1:2 \
--device intel-hda \
+-device sb16 \
 -vga std \
 -smp 4 \
 -machine type=pc,accel=kvm \
+-localtime \
 -device virtio-net-pci,netdev=net0 \
 -netdev user,id=net0,hostfwd=tcp::3389-:3389 \
