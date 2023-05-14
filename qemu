@@ -8,7 +8,8 @@ sudo qemu-system-x86_64 \
 -device usb-tablet \
 -vnc 127.0.0.1:2,power-control=on \
 -vga virtio \
--audiodev pa,id=pa -device sb16,audiodev=pa \
+-audiodev pa,id=pa \
+-device ac97,audiodev=pa \
 -smp 4 \
 -machine type=pc,accel=kvm:tcg \
 -device virtio-net-pci,netdev=net0 \
