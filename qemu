@@ -14,3 +14,5 @@ sudo qemu-system-x86_64 \
 -machine type=pc,accel=kvm:tcg \
 -device virtio-net-pci,netdev=net0 \
 -netdev user,id=net0,hostfwd=tcp::3389-:3389,ipv4=on,ipv6=on \
+-device virtio-net-pci,netdev=net1 \
+-netdev user,id=net1 
