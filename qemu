@@ -1,6 +1,6 @@
 sudo qemu-system-x86_64 \
 -m 4G \
--cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx,vmx=on \
+-cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,nvdimm=on,+nx,vmx=on \
 -enable-kvm \
 -boot order=d \
 -drive file=disk.img,format=raw,if=virtio \
