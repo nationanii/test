@@ -11,6 +11,5 @@ sudo qemu-system-x86_64 \
 -vga std \
 -smp 4 \
 -machine type=pc,accel=kvm \
--localtime \
 -device virtio-net-pci,netdev=net0 \
 -netdev user,id=net0,hostfwd=tcp::3389-:3389 \
