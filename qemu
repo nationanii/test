@@ -1,12 +1,12 @@
 sudo qemu-system-x86_64 \
--m 2G \
+-m 4G \
 -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx,vmx=off \
 -enable-kvm \
 -drive file=disk.img,format=raw,if=virtio,cache=none,aio=native \
 -rtc base=localtime,clock=vm \
 -device usb-ehci,id=usb \
 -device usb-tablet \
--smp 1 \
+-smp 2 \
 -machine type=pc,accel=kvm:tcg \
 -device virtio-net-pci,netdev=net0 \
 -netdev user,id=net0,hostfwd=tcp::3389-:3389 \
