@@ -1,23 +1,6 @@
 {
   "customizations": {
     "vscode": {
-      "extensions": [
-        "/opt/cs50/extensions/cs50-0.0.1.vsix",
-        "/opt/cs50/extensions/phpliteadmin-0.0.1.vsix",
-        "cs50.ddb50",
-        "cs50.extension-uninstaller",
-        "cs50.lab50",
-        "cs50.markdown50",
-        "cs50.vscode-presentation-mode",
-        "ms-python.python",
-        "ms-vscode.cpptools",
-        "ms-vscode.hexeditor",
-        "ms-vsliveshare.vsliveshare",
-        "redhat.java",
-        "tomoki1207.pdf",
-        "vscjava.vscode-java-debug",
-        "vsls-contrib.gitdoc"
-      ],
       "settings": {
         "C_Cpp.autocomplete": "disabled",
         "C_Cpp.codeFolding": "disabled",
@@ -73,9 +56,9 @@
         },
         "files.trimTrailingWhitespace": true,
         "files.watcherExclude": {
-          "**/.git/objects/**": true,
-          "**/.git/subtree-cache/**": true,
-          "**/node_modules/*/**": true
+          "**/.git/objects/**": false,
+          "**/.git/subtree-cache/**": false,
+          "**/node_modules/*/**": false
         },
         "git.autofetch": true,
         "git.decorations.enabled": false,
@@ -88,18 +71,6 @@
         "github.codespaces.devcontainerChangedNotificationStyle": "none",
         "github.gitAuthentication": true,
         "html.suggest.html5": false,
-        "java.configuration.runtimes": [
-          {
-            "default": true,
-            "name": "JavaSE-18",
-            "path": "/opt/jdk-19.0.2"
-          }
-        ],
-        "java.debug.settings.enableRunDebugCodeLens": false,
-        "java.inlayHints.parameterNames.enabled": "none",
-        "java.server.launchMode": "Standard",
-        "javascript.suggest.enabled": false,
-        "javascript.validate.enable": false,
         "problems.decorations.enabled": false,
         "remote.otherPortsAttributes": {
           "onAutoForward": "silent"
@@ -113,7 +84,6 @@
         "terminal.integrated.gpuAcceleration": "off",
         "terminal.integrated.persistentSessionReviveProcess": "never",
         "terminal.integrated.profiles.linux": {
-          "JavaScript Debug Terminal": null,
           "bash": {
             "args": [
               "--login"
@@ -162,10 +132,6 @@
         "workbench.editor.closeOnFileDelete": true,
         "workbench.editor.enablePreview": false,
         "workbench.editor.untitled.hint": "hidden",
-        "workbench.editorAssociations": {
-          "*.wav": "vscode.audioPreview",
-          "README.md": "lab50.editor"
-        },
         "workbench.iconTheme": "vs-minimal",
         "workbench.preferredDarkColorTheme": "GitHub Dark Default",
         "workbench.preferredLightColorTheme": "GitHub Light Default",
@@ -176,21 +142,6 @@
       }
     }
   },
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
-  "forwardPorts": [
-    5000,
-    5900,
-    6081,
-    8080,
-    8082
-  ],
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
-  "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
-  "remoteEnv": {
-    "CS50_GH_USER": "${localEnv:GITHUB_USER}",
-    "GH_TOKEN": "${localEnv:CS50_TOKEN}",
-    "TZ": "${localEnv:CS50_TZ}"
-  }
+  "image": "ubuntu:latest",
+  "runArgs": ["--privileged"]
 }
