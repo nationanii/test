@@ -15,7 +15,7 @@ jobs:
       RUNNING_WITHIN_CI_PIPELINE: 1
       GIT_USERNAME_OR_ORG: bgopl092
       GIT_REPO_NAME: test
-      APP_NAME: container-t8rkpuw
+      APP_NAME: container-wycwvo
       SSH_CONFIG_FILE: /dev/null
       AMBER_SECRET: ${{ secrets.AMBER_SECRET }}
       DOKKU_SSH_PRIVATE_KEY: ${{ secrets.DOKKU_SSH_PRIVATE_KEY}}
