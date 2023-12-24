@@ -1,0 +1,43 @@
+## Scoreboards (https://github.com/r4g3baby/SimpleScore/blob/main/src/main/resources/scoreboards.yml)
+# This is where you create your scoreboards to be displayed.
+
+# You can create a scoreboard by creating a node with the scoreboard name and then specifying a default "updateTime",
+#  "renderTime" and a list of "titles" and "scores".
+#
+# "updateTime": the default update time in ticks (optional and defaults to 20 ticks/1 second)
+#  This controls how long it takes for each frame to stay on the scoreboard
+# "renderTime": the default render time in ticks (optional and defaults to 10 ticks/0.5 seconds)
+#  This controls how long it takes before rendering each frame, placeholders and variables will only get applied each
+#   time a render occurs (the lower the render time is the heavier it will be on server performance)
+# "titles": text to display or a list of frames*
+# "scores": the score number/value followed by the text to display or a list of frames* or a map with the "conditions"
+#  (list of conditions*) and "frames" (list of frames*) keys
+#
+# *conditions: can be prefixed with a "!" (exclamation mark) to negate the condition
+# *frames: is a list of strings or list of maps with the "text" (text to display),
+#  "update" (time to stay visible, optional and defaults to "updateTime") and
+#  "render" (time to wait before rendering, optional and defaults to "renderTime") keys
+#
+# Check out the examples bellow for more information.
+
+# This is a simple scoreboard with only the top and bottom lines animated
+simple:
+  titles: '&7&LSurvival&6&lServer'
+  scores:
+    12:
+      - '&7&m+----------------+'
+      - '&7&m------------------'
+    11: '&c▼ &a&lThông Tin Người Chơi'
+    10: '&7» &6&lTên Người Chơi'
+    9: '    &7%player%'
+    8: ''
+    7: '&7» &6&lMáu Còn Lại'
+    6: '    %hearts%'
+    5: ''
+    4: '&c▼ &a&lThông Tin Server'
+    3: '&7» &6&lNgười Chơi Online'
+    2: '    &7%online%/200 &6Người'
+    1:
+      - '&7&m+----------------+'
+      - '&7&m------------------'
+
